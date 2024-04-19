@@ -1,5 +1,7 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -11,18 +13,16 @@ export const metadata = {
   description: "A health metrics tracking app",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.className} `}>
-  <body className="bg-background text-foreground ">
-    <main className="flex flex-col ">
-      {children}
-    </main>
-  </body>
-</html>
+    <html lang="en" className={`${GeistSans.className}`}>
+      <body className="bg-background text-foreground">
+        <NavBar />
+        <main className="flex flex-col">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
   );
 }

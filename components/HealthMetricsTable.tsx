@@ -79,7 +79,7 @@ const HealthMetricsTable: React.FC<HealthMetricsTableProps> = ({ data, totalPage
   
 
   return (
-    <div className="flex flex-col gap-4 p-4 border border-gray-200 rounded-lg w-full dark:border-gray-800">
+    <div className="flex flex-col gap-4 p-4 rounded-lg w-full">
       <div className="flex items-center gap-4">
         <h1 className="text-2xl font-semibold">Health Metrics</h1>
         <Link href="/insertdata">

@@ -1,13 +1,11 @@
 export default function Header() {
   return (
-    <header className="flex flex-col item-center py-10">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-10">Welcome to Health Curve</h1>
+    <header className="flex flex-col py-5">
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-5">Welcome to Health Curve</h1>
       
-      <div className="max-w-3xl text-center mb-12">
+      <div className="max-w-3xl mb-12">
         <p className="text-xl md:text-2xl mb-6 leading-relaxed">
           Take control of your health with Health Curve. 
-        </p>
-        <p className="text-xl md:text-2xl mb-6 leading-relaxed">
           Easily track your key health indicators, gain valuable insights, and empower yourself to manage chronic conditions more effectively.
         </p>
       </div>
@@ -23,7 +21,7 @@ export default function Header() {
 
       <div>
         <h2 className="text-3xl font-bold mb-6">Explore Health Curve:</h2>
-        <div className="text-xl md:flex md:justify-around max-w-4xl">
+        <div className="text-xl md:flex md:justify-around max-w-4xl mb-10">
           <div className="mb-4 md:mb-0 md:text-center">
             <span className="text-3xl mr-2">{'\uD83D\uDCCB'}</span>  
             <span>Indicators: Easily track and manage your key health indicators</span>

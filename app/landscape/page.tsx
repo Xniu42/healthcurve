@@ -1,9 +1,8 @@
 // app/landscape/page.tsx
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
-import NavBar from '@/components/NavBar';
 import MetricCharts from '@/components/MetricCharts';
-import Footer from '@/components/Footer';
+
 
 export default async function LandscapePage() {
   const supabase = createClient();
@@ -26,12 +25,8 @@ export default async function LandscapePage() {
   }
 
   return (
-    <div>
-      <NavBar />
       <div className="container mx-auto mt-8">
         {metrics && <MetricCharts metrics={metrics} />}
       </div>
-      <Footer />
-    </div>
   );
 }

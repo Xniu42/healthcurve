@@ -2,8 +2,6 @@
 import HealthMetricsTable from '@/components/HealthMetricsTable';
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
-import NavBar from '@/components/NavBar';
-import Footer from '@/components/Footer';
 
 export default async function DataPage({ searchParams }: { searchParams: {page?:string} }) {
   const supabase = createClient();
@@ -38,10 +36,7 @@ export default async function DataPage({ searchParams }: { searchParams: {page?:
   const totalPages = count ? Math.ceil(count / PAGE_SIZE) : 0;
 
   return (
-    <div>
-      <div className="flex-1 w-full flex flex-col gap-20 items-center">
-        <NavBar />
-      </div>
+    <div className='px-20'>
       <HealthMetricsTable 
         data={metrics.map(metric => ({
           id: metric.id, 
@@ -53,7 +48,6 @@ export default async function DataPage({ searchParams }: { searchParams: {page?:
         totalPages={totalPages} 
         currentPage={currentPage} 
       />
-      <Footer />
     </div>
   );
 }

@@ -2,7 +2,6 @@
 import Chat from '@/components/Chat';
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
-import NavBar from '@/components/NavBar';
 
 type Metric = {
   metric_type: string;
@@ -38,9 +37,6 @@ export default async function AnalysisPage() {
 
   return (
     <div>
-      <div className="flex flex-col w-full max-w-4xl mx-auto">
-        <NavBar />
-      </div>
       <Chat metrics={filteredMetrics} />
     </div>
   );

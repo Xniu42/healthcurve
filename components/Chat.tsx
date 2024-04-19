@@ -6,12 +6,15 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
+
+// Define the type of the Metrics array
 export type Metric = {
   metric_type: string;
   metric_value: number;
   metric_date: string;
 };
 
+// Define the type of the ChatProps
 type ChatProps = {
   metrics: Metric[];
 };
@@ -43,7 +46,8 @@ export default function Chat({ metrics }: ChatProps) {
   };
   
   
-  // add a new <form> element that is not visible in the JSX, bind its ref to a formRef variable, and bind its onSubmit event to the handleSubmit function
+  // add a new <form> element that is not visible in the JSX, bind its ref to a formRef variable, 
+  // and bind its onSubmit event to the handleSubmit function
   const formRef = useRef<HTMLFormElement>(null);
   
   
